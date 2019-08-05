@@ -73,7 +73,7 @@ public class FirebaseUtil {
     }
 
     private static void checkAdmin(final String UID) {
-        FirebaseUtil.isAdmin = true;
+        FirebaseUtil.isAdmin = false;
         DatabaseReference reference;
         reference = mDatabaseReference.getParent().child("admins").child(UID);
         reference.addChildEventListener(new ChildEventListener() {
